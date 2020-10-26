@@ -1,0 +1,19 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-bookshelf",
+      "settings": {
+        "client": "postgresql",
+        "host": "${process.env.DATABASE_HOST || '127.0.0.1'}",
+        "port": "${process.env.DATABASE_PORT || 5432}",
+        "database": "${process.env.DATABASE_NAME || 'strapi_store_db'}",
+        "username": "${process.env.DATABASE_USERNAME || 'postgres'}",
+        "password": "${process.env.DATABASE_PASSWORD || ''}"
+      },
+      "options": {
+        "useNullAsDefault": true
+      }
+    }
+  }
+}
